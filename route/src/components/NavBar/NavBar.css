@@ -6,7 +6,7 @@
     font-size: 1.5rem;
     border-radius: 5px;
     text-align: center;
-    text-decoration: underline;
+   
 }
 .list__item:hover{
    box-shadow: 3px 3px grey;
