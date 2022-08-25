@@ -1,4 +1,16 @@
 .messages{
-    padding: 20px;
     font-size: 3rem;
+    text-align: center;
+}
+.messages-content{
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+.messages-list{
+padding-left: 20px;
+}
+.btn-new{
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 2px;
 }

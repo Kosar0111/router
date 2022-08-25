@@ -9,6 +9,8 @@ import Saved from './pages/Saved/Saved'
 import Settings from './pages/Settin/Settings'
 import Subscribers from './pages/Subscriders/Subscribers'
 import Subscriptions from './pages/Subscriptions/Subscriptions'
+import MessageAbout from './pages/MessageAbout/MessageAbout'
+import NewMessages from './pages/NewMessages/NewMessages'
 
 function App() {
   return (
@@ -29,6 +31,14 @@ function App() {
           <Route
             path='messages'
             element={<Messages />}
+          />
+          <Route
+            path='messages/:id'
+            element={<MessageAbout />}
+          />
+          <Route
+            path='messages/new'
+            element={<NewMessages />}
           />
           <Route
             path='saved'

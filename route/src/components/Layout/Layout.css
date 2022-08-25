@@ -16,3 +16,7 @@
     padding: 20px;
     background-color: aliceblue;
 }
+.outlet{
+    overflow: scroll;
+    width: 80%;
+}

@@ -12,7 +12,7 @@ const Layout = () => {
         <div className='nav-bar'>
           <NavBar />
         </div>
-        <div>
+        <div className='outlet'>
           <Outlet />
         </div>
       </div>
