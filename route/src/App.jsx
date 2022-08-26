@@ -11,10 +11,14 @@ import Subscribers from './pages/Subscriders/Subscribers'
 import Subscriptions from './pages/Subscriptions/Subscriptions'
 import MessageAbout from './pages/MessageAbout/MessageAbout'
 import NewMessages from './pages/NewMessages/NewMessages'
+import LoginPage from './pages/Login/LoginPage'
+
+import RequireAth from './hoc/RequireAuth'
+import { AuthProvider } from './hoc/AuthProvider'
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Routes>
         <Route
           path='/'
@@ -38,7 +42,11 @@ function App() {
           />
           <Route
             path='messages/new'
-            element={<NewMessages />}
+            element={
+              <RequireAth>
+                <NewMessages />
+              </RequireAth>
+            }
           />
           <Route
             path='saved'
@@ -57,12 +65,16 @@ function App() {
             element={<Subscriptions />}
           />
           <Route
+            path='login'
+            element={<LoginPage />}
+          />
+          <Route
             path='*'
             element={<Notfoundpage />}
           />
         </Route>
       </Routes>
-    </>
+    </AuthProvider>
   )
 }
 
