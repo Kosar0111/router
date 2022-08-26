@@ -2,3 +2,12 @@
     padding: 20px;
     font-size: 3rem;
 }
+li{
+    list-style-type: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 5px;
+}
+li:hover{
+    box-shadow: 3px 3px;
+}
