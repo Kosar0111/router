@@ -7,23 +7,30 @@ const navigate = useNavigate()
 const { signOut } = useAuth()
 
   return (
-    <form className='form'>
-      <button onClick={() => signOut(() => navigate('/', { replace: true }))}>Log Out</button>
-      <label className='lable'>Name</label>
-      <input
-        type='text'
-        className='form__input'
-      />
-      <label className='lable'>Description</label>
-      <textarea
-        name=''
-        id=''
-        cols='30'
-        rows='10'
-        className='form__textarea'
-      />
-      <button>Add</button>
-    </form>
+    <>
+      <button
+        className='logout'
+        onClick={() => signOut(() => navigate('/', { replace: true }))}
+      >
+        Log Out
+      </button>
+      <form className='form'>
+        <label className='lable'>Name</label>
+        <input
+          type='text'
+          className='form__input'
+        />
+        <label className='lable'>Description</label>
+        <textarea
+          name=''
+          id=''
+          cols='30'
+          rows='10'
+          className='form__textarea'
+        />
+        <button>Add</button>
+      </form>
+    </>
   )
 }
 
