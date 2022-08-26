@@ -7,7 +7,9 @@ const Subscriptions = () => {
   const [photos, setPhotos] = useState([])
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/photos').then(res => setPhotos(res.data))
+    axios
+      .get('https://jsonplaceholder.typicode.com/photos?_limit=20')
+      .then(res => setPhotos(res.data))
   }, [])
   return (
     <div className='subscribers-content'>
@@ -17,7 +19,11 @@ const Subscriptions = () => {
           key={photo.id}
           className='subscribers-list'
         >
-          {photo.url}
+          <h3>{photo.title}</h3>
+          <img
+            src={photo.thumbnailUrl}
+            alt=''
+          />
         </li>
       ))}
       <Link
