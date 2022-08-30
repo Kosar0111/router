@@ -17,7 +17,7 @@ const Subscriptions = () => {
       {photos.map(photo => (
         <li
           key={photo.id}
-          className='subscribers-list'
+          className='subscription-list'
         >
           <h3>{photo.title}</h3>
           <img
